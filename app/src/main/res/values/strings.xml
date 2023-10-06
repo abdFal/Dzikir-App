@@ -28,13 +28,13 @@
 
     <integer-array name="arr_img_artikel">
         <item>@drawable/artikel_1</item>
-        <item>@drawable/bg_artikel</item>
         <item>@drawable/artikel_1</item>
-        <item>@drawable/bg_artikel</item>
         <item>@drawable/artikel_1</item>
-        <item>@drawable/bg_artikel</item>
         <item>@drawable/artikel_1</item>
-        <item>@drawable/bg_artikel</item>
+        <item>@drawable/artikel_1</item>
+        <item>@drawable/artikel_1</item>
+        <item>@drawable/artikel_1</item>
+        <item>@drawable/artikel_1</item>
     </integer-array>
 
 

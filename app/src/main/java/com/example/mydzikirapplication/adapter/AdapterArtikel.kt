@@ -26,6 +26,9 @@ class AdapterArtikel(private val listArtikel: ArrayList<ModelArtikel>) : Recycle
 
         holder.binding.imgFragment.setOnClickListener {
             val intentDetail = Intent(holder.itemView.context, DetailArtikelActivity::class.java)
+            intentDetail.putExtra(DetailArtikelActivity.DETAIL_IMAGE, data.image)
+            intentDetail.putExtra(DetailArtikelActivity.DETAIL_TITLE, data.title)
+            intentDetail.putExtra(DetailArtikelActivity.DETAIL_DESC, data.desc)
             holder.itemView.context.startActivity(intentDetail)
         }
     }
