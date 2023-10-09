@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:contentDescription="@string/content_txt_icon_image_for_background_dzikir"
-            app:srcCompat="@drawable/ic_morning" />
+            android:src="@drawable/ic_morning" />
 
 
         <TextView
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:contentDescription="@string/content_txt_icon_image_for_background_dzikir"
-            app:srcCompat="@drawable/ic_evening" />
+            android:src="@drawable/ic_evening" />
 
 
         <TextView

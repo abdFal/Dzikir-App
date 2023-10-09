@@ -1,8 +1,11 @@
 package com.example.mydzikirapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
+import android.view.View.OnClickListener
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
@@ -11,8 +14,12 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.mydzikirapplication.adapter.AdapterArtikel
 import com.example.mydzikirapplication.databinding.ActivityMainBinding
 import com.example.mydzikirapplication.model.ModelArtikel
+import com.example.mydzikirapplication.ui.DoaHarianActivity
+import com.example.mydzikirapplication.ui.DzikirPagiPetangActivity
+import com.example.mydzikirapplication.ui.DzikirSetiapSaatActivity
+import com.example.mydzikirapplication.ui.SunnahQauliyahActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding:ActivityMainBinding
     private lateinit var slideIndicator: Array<ImageView?>
     private val listArtikel: ArrayList<ModelArtikel> = arrayListOf()
@@ -47,6 +54,11 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             vpArtikel.adapter = AdapterArtikel(listArtikel)
             vpArtikel.registerOnPageChangeCallback(slidingCallback)
+
+        llDzikirDoaShalat.setOnClickListener(this@MainActivity)
+        llDzikirSetiapSaat.setOnClickListener(this@MainActivity)
+        llDzikirDoaHarian.setOnClickListener(this@MainActivity)
+        llDzikirPagiPetang.setOnClickListener(this@MainActivity)
         }
     }
 
@@ -111,5 +123,26 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         binding.vpArtikel.unregisterOnPageChangeCallback(slidingCallback)
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id){
+            R.id.ll_dzikir_doa_shalat -> {
+                val intentDDS = Intent(this@MainActivity, SunnahQauliyahActivity::class.java)
+                startActivity(intentDDS)
+            }
+            R.id.ll_dzikir_setiap_saat -> {
+            val intentDDS = Intent(this@MainActivity, DzikirSetiapSaatActivity::class.java)
+            startActivity(intentDDS)
+            }
+            R.id.ll_dzikir_doa_harian -> {
+            val intentDDS = Intent(this@MainActivity, DoaHarianActivity::class.java)
+            startActivity(intentDDS)
+            }
+            R.id.ll_dzikir_pagi_petang -> {
+            val intentDDS = Intent(this@MainActivity, DzikirPagiPetangActivity::class.java)
+            startActivity(intentDDS)
+            }
+        }
     }
 }

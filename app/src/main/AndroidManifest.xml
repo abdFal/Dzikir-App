@@ -17,22 +17,28 @@
             android:exported="false" />
         <activity
             android:name=".ui.detail.DzikirPetangActivity"
+            android:theme="@style/Theme.MyTheme"
             android:exported="false" />
         <activity
             android:name=".ui.detail.DzikirPagiActivity"
+            android:theme="@style/Theme.MyTheme"
             android:exported="false" />
         <activity
             android:name=".ui.DzikirPagiPetangActivity"
+            android:theme="@style/Theme.MyTheme"
             android:exported="false" />
         <activity
             android:name=".ui.DoaHarianActivity"
+            android:theme="@style/Theme.MyTheme"
             android:exported="false" />
         <activity
             android:name=".ui.DzikirSetiapSaatActivity"
+            android:theme="@style/Theme.MyTheme"
             android:exported="false" />
         <activity
             android:name=".ui.SunnahQauliyahActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyTheme"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
